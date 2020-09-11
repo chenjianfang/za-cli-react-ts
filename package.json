@@ -1,0 +1,24 @@
+{
+  "name": "@za-cli/react-ts",
+  "version": "1.0.7",
+  "description": "珍爱生成react组件文件接口和构建脚手架",
+  "bin": {
+    "za-react-init": "init.js",
+    "za-react-publish": "publish.js"
+  },
+  "files": [
+    "template",
+    "init.js",
+    "package.json",
+    "package.json",
+    "readme.md",
+    "publish.js"
+  ],
+  "author": "chenjianfang",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^6.1.0",
+    "inquirer": "^7.3.3",
+    "shelljs": "^0.8.4"
+  }
+}
