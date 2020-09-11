@@ -10,9 +10,8 @@
     "template",
     "init.js",
     "package.json",
-    "package.json",
-    "readme.md",
-    "publish.js"
+    "publish.js",
+    "readme.md"
   ],
   "author": "chenjianfang",
   "license": "MIT",
