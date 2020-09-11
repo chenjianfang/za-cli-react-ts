@@ -81,6 +81,7 @@ inquirer
 
         // 拷贝readme.md
         shell.cp('-f', resolve('./template/template-readme.md'), `${projectFolder}/readme.md`);
+        shell.cp('-f', resolve('./template/template-tsconfig.json'), `${projectFolder}/tsconfig.json`);
 
         // 生成默认src、test文件夹
         shell.cp('-Rf', resolve('./template/src/'), `${projectFolder}/`);
