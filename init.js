@@ -93,7 +93,7 @@ inquirer
         fs.writeFile(`./package.json`, JSON.stringify(templatePackage).replace(/,/g, ',\n'), function (err) {
             if (err) console.error(err);
 
-            shell.exec(`yarn add @za-build/react-ts`);
+            shell.exec(`yarn add @za-build/react-ts -D`);
         });
     })
     .catch(error => {

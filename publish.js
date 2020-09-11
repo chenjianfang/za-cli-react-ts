@@ -1,6 +1,11 @@
 #!/usr/bin/env node
+const path = require("path");
 const fs = require("fs");
 var shell = require('shelljs');
+
+const resolve = (dir = '') => path.join(__dirname, dir);
+const parentPath = process.cwd();
+console.log('parentPath: ', parentPath);
 
 function addVersion(version) {
     let nextOne = 0;
@@ -19,7 +24,7 @@ function addVersion(version) {
     return versionArr.reverse().join('.');
 }
 
-var templatePackage = fs.readFileSync('./package.json');
+var templatePackage = fs.readFileSync(`${parentPath}/package.json`);
 templatePackage = JSON.parse(templatePackage);
 if (/^@za/.test(templatePackage.name)) {
     const version = templatePackage.version;
