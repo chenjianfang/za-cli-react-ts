@@ -3,14 +3,14 @@
 
 ## Installation
 ```
-    yarn global add @za-cli/react-ts
+yarn global add @za-cli/react-ts
 ```
 
 ## Usage
 ```
-    // 生成react组件文件夹结构，安装@za-build/react-ts脚手架
-    za-react-init
+// 生成react组件文件夹结构，安装@za-build/react-ts脚手架
+za-react-init
 
-    // 上传组件
-    za-react-publish
+// 上传组件
+za-react-publish
 ```

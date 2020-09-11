@@ -5,7 +5,7 @@ npm i xxx
 
 ## import
 ```
-    import xxx from xxx
+import xxx from xxx
 ```
 
 ## API

@@ -1,6 +1,6 @@
 {
   "name": "@za-cli/react-ts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "珍爱生成react组件文件接口和构建脚手架",
   "bin": {
     "za-react-init": "init.js",
