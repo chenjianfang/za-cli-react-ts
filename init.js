@@ -16,11 +16,11 @@ var gitname = execSync('git config user.name', {
     encoding: 'utf8'
 });
 gitname = gitname.trim();
-const parentPath = process.cwd();
+const cwd = process.cwd();
 const currentPath = resolve();
-console.log('parentPath: ', parentPath);
+console.log('cwd: ', cwd);
 console.log('currentPath: ', currentPath);
-const currentPathFolderList = fs.readdirSync(parentPath, 'utf8');
+const currentPathFolderList = fs.readdirSync(cwd, 'utf8');
 
 inquirer
     .prompt([
@@ -68,7 +68,7 @@ inquirer
         }
     ])
     .then(({ name, author, description }) => {
-        const projectFolder = path.join(parentPath, name);
+        const projectFolder = path.join(cwd, name);
         // 创建文件夹
         shell.exec(`mkdir -p ${projectFolder}`);
 
@@ -93,7 +93,15 @@ inquirer
         fs.writeFile(`./package.json`, JSON.stringify(templatePackage).replace(/,/g, ',\n'), function (err) {
             if (err) console.error(err);
 
-            shell.exec(`yarn add @za-build/react-ts -D`);
+            shell.exec(`yarn add @za-build/rollup-react-ts -D`, function(code, stdout, stderr) {
+                console.log('stdout: ', stdout);
+                if (code === 0) {
+                    console.log(`---------------------------------祝你开发react组件愉快---------------------------------------\n`);
+                    console.log(`\n`);
+                    console.log(`cd ${name} \n`);
+                    console.log('npx za-react-dev\n');
+                }
+            });
         });
     })
     .catch(error => {

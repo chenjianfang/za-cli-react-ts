@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "common/*": ["common/*"],
-      "js/*": ["common/js/*"],
-      "test/*": ["test/*"]
+      "common/*": ["common/*"]
     },
     "module": "esNext",
     "strictNullChecks": true,

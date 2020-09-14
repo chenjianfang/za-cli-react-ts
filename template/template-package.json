@@ -2,9 +2,9 @@
   "name": "@za/react-",
   "version": "0.0.0",
   "description": "",
-  "main": "/dist/js/index.js",
+  "main": "/libs/index.js",
   "files": [
-    "dist",
+    "libs",
     "src",
     "test",
     "package.json",
