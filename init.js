@@ -82,10 +82,14 @@ inquirer
         // 拷贝readme.md
         shell.cp('-f', resolve('./template/template-readme.md'), `${projectFolder}/readme.md`);
         shell.cp('-f', resolve('./template/template-tsconfig.json'), `${projectFolder}/tsconfig.json`);
+        shell.cp('-f', resolve('./template/template-postcss.config.js'), `${projectFolder}/postcss.config.js`);
+        shell.cp('-f', resolve('./template/template-babel.config.js'), `${projectFolder}/babel.config.js`);
+        shell.cp('-f', resolve('./template/template-declareModule.d.ts'), `${projectFolder}/declareModule.d.ts`);
 
-        // 生成默认src、test文件夹
+        // 生成默认src、test、build文件夹
         shell.cp('-Rf', resolve('./template/src/'), `${projectFolder}/`);
         shell.cp('-Rf', resolve('./template/test/'), `${projectFolder}/`);
+        shell.cp('-Rf', resolve('./template/build/'), `${projectFolder}/`);
 
         shell.cd(projectFolder);
 
