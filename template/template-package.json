@@ -4,12 +4,14 @@
   "description": "",
   "main": "libs/index.js",
   "files": [
+    "types",
     "libs",
     "src",
     "test",
     "package.json",
     "readme.md"
   ],
+  "types": "types/index.d.ts",
   "author": "chenjianfang",
   "license": "MIT",
   "peerDependencies": {

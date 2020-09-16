@@ -90,10 +90,11 @@ inquirer
         shell.cp('-f', resolve('../template/template-babel.config.js'), `${projectFolder}/babel.config.js`);
         shell.cp('-f', resolve('../template/template-declareModule.d.ts'), `${projectFolder}/declareModule.d.ts`);
 
-        // 生成默认src、test、build文件夹
+        // 生成默认src、test、build、types文件夹
         shell.cp('-Rf', resolve('../template/src/'), `${projectFolder}/`);
         shell.cp('-Rf', resolve('../template/test/'), `${projectFolder}/`);
         shell.cp('-Rf', resolve('../template/build/'), `${projectFolder}/`);
+        shell.cp('-Rf', resolve('../template/types/'), `${projectFolder}/`);
 
         shell.cd(projectFolder);
 
