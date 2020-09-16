@@ -73,23 +73,23 @@ inquirer
         shell.exec(`mkdir -p ${projectFolder}`);
 
         // 设置package.json
-        var templatePackage = fs.readFileSync(resolve('./template/template-package.json'), 'utf8');
+        var templatePackage = fs.readFileSync(resolve('../template/template-package.json'), 'utf8');
         templatePackage = JSON.parse(templatePackage);
         templatePackage.name += name;
         templatePackage.author = author;
         templatePackage.description = description;
 
         // 拷贝readme.md
-        shell.cp('-f', resolve('./template/template-readme.md'), `${projectFolder}/readme.md`);
-        shell.cp('-f', resolve('./template/template-tsconfig.json'), `${projectFolder}/tsconfig.json`);
-        shell.cp('-f', resolve('./template/template-postcss.config.js'), `${projectFolder}/postcss.config.js`);
-        shell.cp('-f', resolve('./template/template-babel.config.js'), `${projectFolder}/babel.config.js`);
-        shell.cp('-f', resolve('./template/template-declareModule.d.ts'), `${projectFolder}/declareModule.d.ts`);
+        shell.cp('-f', resolve('../template/template-readme.md'), `${projectFolder}/readme.md`);
+        shell.cp('-f', resolve('../template/template-tsconfig.json'), `${projectFolder}/tsconfig.json`);
+        shell.cp('-f', resolve('../template/template-postcss.config.js'), `${projectFolder}/postcss.config.js`);
+        shell.cp('-f', resolve('../template/template-babel.config.js'), `${projectFolder}/babel.config.js`);
+        shell.cp('-f', resolve('../template/template-declareModule.d.ts'), `${projectFolder}/declareModule.d.ts`);
 
         // 生成默认src、test、build文件夹
-        shell.cp('-Rf', resolve('./template/src/'), `${projectFolder}/`);
-        shell.cp('-Rf', resolve('./template/test/'), `${projectFolder}/`);
-        shell.cp('-Rf', resolve('./template/build/'), `${projectFolder}/`);
+        shell.cp('-Rf', resolve('../template/src/'), `${projectFolder}/`);
+        shell.cp('-Rf', resolve('../template/test/'), `${projectFolder}/`);
+        shell.cp('-Rf', resolve('../template/build/'), `${projectFolder}/`);
 
         shell.cd(projectFolder);
 
@@ -97,14 +97,14 @@ inquirer
         fs.writeFile(`./package.json`, JSON.stringify(templatePackage).replace(/,/g, ',\n'), function (err) {
             if (err) console.error(err);
 
-            shell.exec(`yarn add @za-build/rollup-react-ts -D`, function(code, stdout, stderr) {
-            // shell.exec(`npm install @za-build/rollup-react-ts --save-dev`, function(code, stdout, stderr) {
+            // shell.exec(`yarn add @za-build/rollup-react-ts -D`, function(code, stdout, stderr) {
+            shell.exec(`npm install @za-build/rollup-react-ts --save-dev`, function(code, stdout, stderr) {
                 console.log('stdout: ', stdout);
                 if (code === 0) {
                     console.log(`---------------------------------祝你开发react组件愉快---------------------------------------\n`);
                     console.log(`\n`);
                     console.log(`cd ${name} \n`);
-                    console.log('npx za-react-dev\n');
+                    console.log('za-react-dev\n');
                 }
             });
         });

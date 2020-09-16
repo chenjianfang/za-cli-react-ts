@@ -11,13 +11,14 @@ yarn global add @za-cli/react-ts
 // 生成react组件文件夹结构，安装@za-build/react-ts脚手架
 za-react-init
 
-/******进入创建的文件夹*******/
+// 进入创建的文件夹
+cd yourProjectName
 
 // 开发组件
-npx za-react-dev
+za-react-dev
 
 // 打包生产组件
-npx za-react-build
+za-react-build
 
 // 上传组件
 za-react-publish
