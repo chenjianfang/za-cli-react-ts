@@ -5,4 +5,4 @@ const cwd = process.cwd();
 console.log('cwd: ', cwd);
 
 shell.cd(cwd);
-shell.exec("npx rollup --config build/rollup.config.prod.js");
+shell.exec("npx rollup --config /build/rollup.config.prod.js");

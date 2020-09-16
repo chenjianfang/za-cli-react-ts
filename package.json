@@ -1,6 +1,6 @@
 {
   "name": "@za-cli/react-ts",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "珍爱生成react组件文件接口和构建脚手架",
   "preferGlobal": true,
   "link": true,
