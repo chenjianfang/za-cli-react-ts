@@ -17,7 +17,7 @@ const cwdRoot = utils.cwdRoot;
 const templateHtml = fs.readFileSync(cwdRoot('test/template.html'), 'utf8');
 
 export default {
-    input: cwdRoot('src/index.tsx'),
+    input: cwdRoot('test/template.tsx'),
     output: {
         name: 'runner',
         file: cwdRoot('test/index.js'),
