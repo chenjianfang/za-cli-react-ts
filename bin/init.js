@@ -35,6 +35,10 @@ inquirer
                         done('只能由字母和-组成');
                         return;
                     }
+                    if (input.trim().length === 0) {
+                        done('名字必填');
+                        return;
+                    }
                     if (currentPathFolderList.find((currentFolder) => currentFolder === input)) {
                         done('当前文件夹已包含同名文件夹');
                         return;

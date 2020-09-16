@@ -11,5 +11,8 @@
     "readme.md"
   ],
   "author": "chenjianfang",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
 }

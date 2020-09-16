@@ -3,7 +3,7 @@
 
 ## Installation
 ```
-yarn global add @za-cli/react-ts
+npm install @za-cli/react-ts -g -f
 ```
 
 ## Usage
