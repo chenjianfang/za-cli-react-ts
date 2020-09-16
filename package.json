@@ -1,10 +1,14 @@
 {
   "name": "@za-cli/react-ts",
-  "version": "1.1.7",
+  "version": "1.2.7",
   "description": "珍爱生成react组件文件接口和构建脚手架",
+  "preferGlobal": true,
+  "link": true,
   "bin": {
-    "za-react-init": "init.js",
-    "za-react-publish": "publish.js"
+    "za-react-init": "./bin/init.js",
+    "za-react-publish": "./bin/publish.js",
+    "za-react-dev": "./bin/dev.js",
+    "za-react-build": "./bin/build.js"
   },
   "files": [
     "template",

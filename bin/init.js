@@ -98,6 +98,7 @@ inquirer
             if (err) console.error(err);
 
             shell.exec(`yarn add @za-build/rollup-react-ts -D`, function(code, stdout, stderr) {
+            // shell.exec(`npm install @za-build/rollup-react-ts --save-dev`, function(code, stdout, stderr) {
                 console.log('stdout: ', stdout);
                 if (code === 0) {
                     console.log(`---------------------------------祝你开发react组件愉快---------------------------------------\n`);
