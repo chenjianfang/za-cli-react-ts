@@ -1,7 +1,7 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import babel from '@rollup/plugin-babel';
+import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 import replace from '@rollup/plugin-replace';
 import postcss from 'rollup-plugin-postcss'
 
@@ -18,7 +18,10 @@ export default {
         nodeResolve(),
         commonjs(),
         typescript(),
-        babel({ babelHelpers: 'runtime' }),
+        getBabelOutputPlugin({
+            presets: ['@babel/preset-env']
+        }),
+        // babel({ babelHelpers: 'runtime' }),
         replace({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
@@ -28,5 +31,5 @@ export default {
             modules: true,
         })
     ],
-    external: ['react', 'react-dom']
+    external: ['react', 'react-dom', /@babel\/runtime/]
 };
