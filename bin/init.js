@@ -74,7 +74,7 @@ inquirer
     .then(({ name, author, description }) => {
         const projectFolder = path.join(cwd, name);
         // 创建文件夹
-        shell.exec(`mkdir -p ${projectFolder}`);
+        shell.exec(`mkdir ${projectFolder}`);
 
         // 设置package.json
         var templatePackage = fs.readFileSync(resolve('../template/template-package.json'), 'utf8');
