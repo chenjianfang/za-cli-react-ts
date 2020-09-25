@@ -6,7 +6,6 @@
   "files": [
     "types",
     "libs",
-    "src",
     "test",
     "package.json",
     "readme.md"
