@@ -1,3 +1,4 @@
+const rollup = require('rollup');
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
@@ -16,7 +17,7 @@ const cwdRoot = utils.cwdRoot;
 
 const templateHtml = fs.readFileSync(cwdRoot('test/template.html'), 'utf8');
 
-export default {
+const config = {
     input: cwdRoot('test/template.tsx'),
     output: {
         name: 'runner',
@@ -46,5 +47,11 @@ export default {
             contentBase: 'test',
             port: 1010
         })
-    ]
+    ],
+    watch: {
+        include: 'src/**',
+        exclude: 'node_modules/**'
+    }
 };
+
+export default config;

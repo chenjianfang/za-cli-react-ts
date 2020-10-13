@@ -1,6 +1,6 @@
 {
   "name": "@za-cli/components-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "珍爱生成react组件文件接口和构建脚手架",
   "bin": {
     "za-react-init": "./bin/init.js",
