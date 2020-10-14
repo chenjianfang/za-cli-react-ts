@@ -14,11 +14,14 @@ za-react-init
 // 进入创建的文件夹
 cd yourProjectName
 
+// 安装依赖
+npm install
+
 // 开发组件
-za-react-dev
+npx za-dev-react-components
 
 // 打包生产组件
-za-react-build
+npx za-prod-react-components
 
 // 上传组件
 za-react-publish
