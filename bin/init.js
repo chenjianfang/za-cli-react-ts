@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 var inquirer = require('inquirer');
 var shell = require('shelljs');
+var chalk = require('chalk');
 
 const resolve = (dir = '') => path.join(__dirname, dir);
 
@@ -99,19 +100,13 @@ inquirer
         shell.cd(projectFolder);
 
         // 生成package.json
-        fs.writeFile(`./package.json`, JSON.stringify(templatePackage).replace(/,/g, ',\n'), function (err) {
+        fs.writeFile(`./package.json`, JSON.stringify(templatePackage,null,4), function (err) {
             if (err) console.error(err);
 
-            // shell.exec(`yarn add @za-build/rollup-react-ts -D`, function(code, stdout, stderr) {
-            shell.exec(`npm install @za-build/rollup-react-ts --save-dev`, function(code, stdout, stderr) {
-                console.log('stdout: ', stdout);
-                if (code === 0) {
-                    console.log(`---------------------------------祝你开发react组件愉快---------------------------------------\n`);
-                    console.log(`\n`);
-                    console.log(`cd ${name} \n`);
-                    console.log('za-react-dev\n');
-                }
-            });
+            console.log(chalk.blue(`---------------------------------祝你开发react组件愉快---------------------------------------`));
+            console.log(chalk.blue(`cd ${name} \n`));
+            console.log(chalk.blue(`npm install \n`));
+            console.log(chalk.blue('za-react-dev\n'));
         });
     })
     .catch(error => {

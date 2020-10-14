@@ -1,6 +1,6 @@
 {
   "name": "@za-cli/components-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "珍爱生成react组件文件接口和构建脚手架",
   "bin": {
     "za-react-init": "./bin/init.js",
@@ -21,6 +21,7 @@
     "url": "https://github.com/chenjianfang/za-cli-react-ts"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "commander": "^6.1.0",
     "inquirer": "^7.3.3",
     "shelljs": "^0.8.4"

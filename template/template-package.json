@@ -1,19 +1,22 @@
 {
-  "name": "@za/react-",
-  "version": "0.0.0",
-  "description": "",
-  "main": "libs/index.js",
-  "files": [
-    "types",
-    "libs",
-    "test",
-    "package.json",
-    "readme.md"
-  ],
-  "types": "types/index.d.ts",
-  "author": "chenjianfang",
-  "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.13.1"
-  }
+    "name": "@za/react-",
+    "version": "0.0.0",
+    "description": "",
+    "main": "libs/index.js",
+    "files": [
+        "types",
+        "libs",
+        "test",
+        "package.json",
+        "readme.md"
+    ],
+    "types": "types/index.d.ts",
+    "author": "chenjianfang",
+    "license": "MIT",
+    "devDependencies": {
+        "@za-build/rollup-react-ts": "^0.1.9"
+    },
+    "peerDependencies": {
+        "react": "^16.13.1"
+    }
 }
