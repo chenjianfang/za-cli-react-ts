@@ -14,7 +14,7 @@
     "author": "chenjianfang",
     "license": "MIT",
     "devDependencies": {
-        "@za-build/rollup-react-ts": "^0.1.9"
+        "@za-build/components-react": "^1.2.1"
     },
     "peerDependencies": {
         "react": "^16.13.1"

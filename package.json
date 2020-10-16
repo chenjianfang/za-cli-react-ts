@@ -1,6 +1,6 @@
 {
   "name": "@za-cli/components-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "珍爱生成react组件文件接口和构建脚手架",
   "bin": {
     "za-react-init": "./bin/init.js",
@@ -25,6 +25,6 @@
     "shelljs": "^0.8.4"
   },
   "peerDependencies": {
-    "@za-build/rollup-react-ts": "^0.0.3"
+      "@za-build/components-react": "^1.2.1"
   }
 }
